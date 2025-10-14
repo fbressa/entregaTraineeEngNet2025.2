@@ -31,6 +31,8 @@ edit_uri: edit/main/docs/
 # Se tiver subpastas em docs/, adicione aqui em 'nav' conforme criar.
 nav:
   - Início: index.md
+  - Entregas:
+      - Entrega 1: entregas/entrega1.md
 
 # ——— Plugins ———
 plugins:
