@@ -1,0 +1,41 @@
+site_name: entregaTraineeEngNet2025 
+
+repo_name: "entregaTraineeEngNet2025.2"
+repo_url: https://github.com/fbressa/entregaTraineeEngNet2025.2
+
+nav:
+  - Início: index.md
+
+theme:
+  name: material 
+  language: pt-BR
+
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - header.autohide
+    - navigation.instant
+    - navigation.top
+    - navigation.tracking
+
+  palette:
+    - scheme: default
+      primary: 'deep purple'
+      accent: 'indigo'
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+        
+    - scheme: slate
+      primary: 'deep purple'
+      accent: 'indigo'
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  
+        #logo: assets/CafeSitioLogo.png
+        #favicon: assets/CafeSitioLogo.png
+        #highlightjs: true
+
+extra_css:
+  - stylesheets/styles.css
