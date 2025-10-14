@@ -1,41 +1,55 @@
-site_name: entregaTraineeEngNet2025 
+# ——— Básico ———
+site_name: Entregas Trainee EngNet 2025.2
+site_url: https://fbressa.github.io/entregaTraineeEngNet2025.2/
+site_author: TRIO TERNURA
+site_description: Documentação das entregas do trainee da Eng Net 2025.2
 
-repo_name: "entregaTraineeEngNet2025.2"
+# ——— Tema Material ———
+theme:
+  name: material
+  language: pt
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+  features:
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - content.action.edit
+    - content.code.annotate
+    - search.highlight
+    - search.share
+
+# ——— Repositório ———
+repo_name: fbressa/entregaTraineeEngNet2025.2
 repo_url: https://github.com/fbressa/entregaTraineeEngNet2025.2
+edit_uri: edit/main/docs/
 
+# ——— Navegação ———
+# Obs.: mantenho mínimo para não “quebrar” se os arquivos mudarem.
+# Se tiver subpastas em docs/, adicione aqui em 'nav' conforme criar.
 nav:
   - Início: index.md
 
-theme:
-  name: material 
-  language: pt-BR
+# ——— Plugins ———
+plugins:
+  - search
+  - tags
 
-  features:
-    - content.code.annotate
-    - content.tabs.link
-    - header.autohide
-    - navigation.instant
-    - navigation.top
-    - navigation.tracking
-
-  palette:
-    - scheme: default
-      primary: 'deep purple'
-      accent: 'indigo'
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-        
-    - scheme: slate
-      primary: 'deep purple'
-      accent: 'indigo'
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-  
-        #logo: assets/CafeSitioLogo.png
-        #favicon: assets/CafeSitioLogo.png
-        #highlightjs: true
-
-extra_css:
-  - stylesheets/styles.css
+# ——— Extensões Markdown ———
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.tasklist:
+      custom_checkbox: true
