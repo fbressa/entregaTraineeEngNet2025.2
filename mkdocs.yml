@@ -34,9 +34,9 @@ nav:
   - Entrega 1:
       - Levantamento: entregas/descricao.md
       - Modelagem:
-          - User story map: entregas/usm.md
+          - "User Story Map": entregas/usm.md
           - Priorização: entregas/priorizacao.md
-          - Jornada do usuário: entregas/jornada.md
+          - "Jornada do Usuário": entregas/jornada.md
           - Backlog: entregas/backlog.md
       - Rastreabilidade: entregas/rastreabilidade.md
 # ——— Plugins ———
