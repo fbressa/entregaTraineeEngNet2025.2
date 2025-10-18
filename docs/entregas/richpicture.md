@@ -6,6 +6,4 @@ Seu objetivo é representar, de forma não técnica e intuitiva, os atores, proc
 Diferente de diagramas formais, o Rich Picture não possui regras rígidas de notação, ele pode incluir desenhos, símbolos, textos e conexões livres, tornando-se uma ferramenta ideal para expressar ideias complexas de forma acessível.
 É amplamente utilizado em análise de requisitos, levantamento de necessidades e comunicação entre as partes interessadas, servindo como ponto de partida para a compreensão do domínio do problema e a construção de soluções mais alinhadas à realidade do usuário.
 
-<div align="center">
-    <img src="../assets/rp.jpg" alt="rich picture">
-</div>
+![rich picture](../assets/rp.jpg)
