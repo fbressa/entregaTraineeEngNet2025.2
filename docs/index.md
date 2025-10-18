@@ -14,17 +14,3 @@ A proposta é tornar a jornada fitness mais envolvente e motivadora, criando uma
 
 Este repositório reúne a documentação e os artefatos criados pelo **Quarteto ternura** para o projeto do processo de trainee da Eng Net. A entrega se concentra na engenharia reversa do aplicativo gym rats.
 
-## Documentação
-
-### Acessando pela Internet
-
-Para acessar a página web da nossa documentação **[Clique aqui](https://fbressa.github.io/entregaTraineeEngNet2025.2/)**
-
-### Executando localmente
-
-A geração do site estático é realizada utilizando o MKDOCS.
-
-1. Execute o seguinte comando para rodar o site
-
-```shell
-mkdocs serve
