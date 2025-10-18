@@ -32,7 +32,9 @@ edit_uri: edit/main/docs/
 nav:
   - Início: index.md
   - Entrega 1:
-      - Levantamento: entregas/descricao.md
+      - Levantamento: 
+          - Problema: entregas/descricao.md
+          - "Levantamento de requisitos funcionais": entregas/levantameto.md
       - Modelagem:
           - "User Story Map": entregas/usm.md
           - Priorização: entregas/priorizacao.md
