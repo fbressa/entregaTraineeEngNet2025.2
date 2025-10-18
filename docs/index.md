@@ -1,6 +1,8 @@
-# GymRats
+<h1 style="text-align: center;">GymRats</h1>
 
-![Logo](./assets/logo.png)
+<div align="center">
+    <img src="./assets/logo.png" alt="Logo">
+</div>
 
 GymRats é uma plataforma que incentiva a prática de atividades físicas por meio da gamificação e interação social. Nela, os usuários podem criar e participar de grupos de competição, desafiando amigos e colegas.
 
