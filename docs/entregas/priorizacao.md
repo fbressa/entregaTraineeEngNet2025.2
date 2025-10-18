@@ -26,6 +26,4 @@ Baixa prioridade, devendo ser revistos ou descartados.
 
 Essa priorização contribui para otimizar o planejamento do backlog, concentrando os esforços iniciais em entregas de alto valor com baixo custo, o que acelera a geração de resultados e a validação do produto com os usuários.
 
-<div align="center">
-    <img src="../assets/priorizacao.png" alt="rich picture">
-</div>
+![Matriz de priorização](../assets/priorizacao.png)
