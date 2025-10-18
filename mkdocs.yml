@@ -33,8 +33,12 @@ nav:
   - Início: index.md
   - Entrega 1:
       - Levantamento: entregas/descricao.md
-      - Modelagem: entregas/modelagem.md
-      - Backlog: entregas/backlog.md
+      - Modelagem:
+          - User story map: entregas/usm.md
+          - Priorização: entregas/priorizacao.md
+          - Jornada do usuário: entregas/jornada.md
+          - Backlog: entregas/backlog.md
+      - Rastreabilidade: entregas/rastreabilidade.md
 # ——— Plugins ———
 plugins:
   - search
