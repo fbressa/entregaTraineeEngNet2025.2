@@ -34,6 +34,7 @@ nav:
   - Entrega 1:
       - Levantamento: 
           - Problema: entregas/descricao.md
+          - "Rich picture": entregas/richpicture.md
           - "Levantamento de requisitos funcionais": entregas/levantameto.md
       - Modelagem:
           - "User Story Map": entregas/usm.md
