@@ -596,6 +596,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Índice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#uc-01-cadastrar-novo-usuario" class="md-nav__link">
     <span class="md-ellipsis">
       UC-01: Cadastrar Novo Usuário
@@ -791,6 +800,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      Índice
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#uc-01-cadastrar-novo-usuario" class="md-nav__link">
     <span class="md-ellipsis">
       UC-01: Cadastrar Novo Usuário
@@ -906,177 +924,200 @@
 
 <h1 id="casos-de-uso-gym-rats">Casos de Uso – Gym Rats<a class="headerlink" href="#casos-de-uso-gym-rats" title="Permanent link">&para;</a></h1>
 <h2 id="descricao">Descrição<a class="headerlink" href="#descricao" title="Permanent link">&para;</a></h2>
-<p>A elaboração de casos de uso isa descrever as funcionalidades do sistema sob a perspectiva dos usuários, permitindo uma visão geral dos serviços oferecidos pelo sistema e da interação entre os atores.</p>
+<p>A elaboração de casos de uso <strong>visa</strong> descrever as funcionalidades do sistema sob a perspectiva dos usuários, permitindo uma visão geral dos serviços oferecidos e da interação entre os atores.</p>
+<hr />
+<h2 id="indice">Índice<a class="headerlink" href="#indice" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#uc-01-cadastrar-novo-usuário">UC-01: Cadastrar Novo Usuário</a></li>
+<li><a href="#uc-02-realizar-login-com-e-mail-e-senha">UC-02: Realizar Login com E-mail e Senha</a></li>
+<li><a href="#uc-03-recuperar-senha-de-acesso">UC-03: Recuperar Senha de Acesso</a></li>
+<li><a href="#uc-04-realizar-logout">UC-04: Realizar Logout</a></li>
+<li><a href="#uc-05-apagar-conta">UC-05: Apagar Conta</a></li>
+<li><a href="#uc-06-criar-grupo-de-competição">UC-06: Criar Grupo de Competição</a></li>
+<li><a href="#uc-07-entrar-em-grupo-via-código">UC-07: Entrar em Grupo via Código</a></li>
+<li><a href="#uc-08-registrar-atividade-manualmente">UC-08: Registrar Atividade Manualmente</a></li>
+<li><a href="#uc-09-interagir-no-feed-do-grupo">UC-09: Interagir no Feed do Grupo</a></li>
+<li><a href="#uc-10-gerenciar-grupo-admin">UC-10: Gerenciar Grupo (Admin)</a></li>
+</ul>
+<hr />
 <h2 id="uc-01-cadastrar-novo-usuario">UC-01: Cadastrar Novo Usuário<a class="headerlink" href="#uc-01-cadastrar-novo-usuario" title="Permanent link">&para;</a></h2>
 <p><strong>Ator Principal:</strong> Novo Usuário<br />
-<strong>Objetivo:</strong> Criar uma nova conta no aplicativo para poder participar das competições.<br />
-<strong>Pré-condições:</strong> O usuário não possui uma conta existente com o e-mail fornecido.<br />
-<strong>Pós-condições:</strong><br />
-- Uma nova conta de usuário é criada no sistema com status "não validado".<br />
-- Um e-mail de validação é enviado para o endereço de e-mail fornecido.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-1. O usuário seleciona a opção "Criar Conta".<br />
-2. O sistema exibe um formulário solicitando nome, e-mail e senha.<br />
+<strong>Objetivo:</strong> Criar uma nova conta no aplicativo para poder participar das competições.</p>
+<p><strong>Pré-condições</strong>
+- O usuário não possui uma conta existente com o e-mail fornecido.</p>
+<p><strong>Pós-condições</strong>
+- Conta de usuário criada com status <strong>“não validado”</strong>.
+- E-mail de validação enviado ao endereço informado.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+1. O usuário seleciona <strong>“Criar Conta”</strong>.<br />
+2. O sistema exibe formulário solicitando <strong>nome</strong>, <strong>e-mail</strong> e <strong>senha</strong>.<br />
 3. O usuário preenche os dados e confirma.<br />
 4. O sistema valida os dados e cria a conta.<br />
-5. O sistema exibe uma mensagem instruindo o usuário a verificar seu e-mail para validar a conta.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- <strong>A1: E-mail já em uso:</strong><br />
-  - No passo 4, se o e-mail já estiver cadastrado:<br />
-    - O sistema exibe uma mensagem de erro: "Este e-mail já está em uso."<br />
-    - O fluxo retorna ao passo 3.  </p>
+5. O sistema exibe instrução para verificar o e-mail e validar a conta.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <strong>A1 — E-mail já em uso</strong><br />
+  4.1. O sistema exibe: <em>“Este e-mail já está em uso.”</em><br />
+  4.2. Retorna ao passo <strong>3</strong>.</p>
 <hr />
 <h2 id="uc-02-realizar-login-com-e-mail-e-senha">UC-02: Realizar Login com E-mail e Senha<a class="headerlink" href="#uc-02-realizar-login-com-e-mail-e-senha" title="Permanent link">&para;</a></h2>
 <p><strong>Ator Principal:</strong> Usuário<br />
-<strong>Objetivo:</strong> Acessar as funcionalidades restritas do aplicativo de forma segura.<br />
-<strong>Pré-condições:</strong><br />
-- O usuário deve ter uma conta cadastrada e validada.<br />
-- O usuário deve estar na tela de autenticação.<br />
-<strong>Pós-condições:</strong> O usuário está autenticado no sistema e visualiza a tela principal.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-1. O usuário insere seu e-mail e senha.<br />
-2. O usuário clica no botão "Entrar".<br />
-3. O sistema verifica se as credenciais são válidas.<br />
-4. O sistema autentica o usuário e exibe a tela principal.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- <strong>A1: Credenciais Inválidas:</strong><br />
-  - No passo 3, se as credenciais estiverem incorretas:<br />
-    - O sistema exibe uma mensagem: "E-mail ou senha inválidos".<br />
-    - O fluxo retorna ao passo 1.<br />
-- <strong>A2: Login via conta Google/Apple:</strong><br />
-  1. O usuário clica na opção de login social.<br />
-  2. O sistema redireciona para a autenticação do provedor.<br />
-  3. Após autorização, o sistema autentica o usuário.  </p>
+<strong>Objetivo:</strong> Acessar funcionalidades restritas de forma segura.</p>
+<p><strong>Pré-condições</strong>
+- Conta cadastrada e <strong>validada</strong>.<br />
+- Usuário na tela de autenticação.</p>
+<p><strong>Pós-condições</strong>
+- Usuário autenticado e visualizando a <strong>tela principal</strong>.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+1. O usuário insere <strong>e-mail</strong> e <strong>senha</strong>.<br />
+2. Clica em <strong>“Entrar”</strong>.<br />
+3. O sistema verifica as credenciais.<br />
+4. O sistema autentica e exibe a tela principal.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <strong>A1 — Credenciais inválidas</strong><br />
+  3.1. O sistema exibe: <em>“E-mail ou senha inválidos.”</em><br />
+  3.2. Retorna ao passo <strong>1</strong>.
+- <strong>A2 — Login via Google/Apple</strong><br />
+  1. O usuário seleciona <strong>login social</strong>.<br />
+  2. Redirecionamento para o provedor.<br />
+  3. Após autorização, o sistema autentica o usuário.</p>
 <hr />
 <h2 id="uc-03-recuperar-senha-de-acesso">UC-03: Recuperar Senha de Acesso<a class="headerlink" href="#uc-03-recuperar-senha-de-acesso" title="Permanent link">&para;</a></h2>
 <p><strong>Ator Principal:</strong> Usuário<br />
-<strong>Objetivo:</strong> Redefinir a senha para recuperar o acesso à conta.<br />
-<strong>Pré-condições:</strong> O usuário está na tela de login.<br />
-<strong>Pós-condições:</strong> A senha do usuário é atualizada no sistema.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-1. O usuário clica em "Esqueci minha senha".<br />
-2. O sistema solicita o e-mail da conta.<br />
-3. O usuário insere seu e-mail e confirma.<br />
-4. O sistema envia um link seguro para o e-mail do usuário.<br />
-5. O usuário clica no link e cadastra uma nova senha.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- <strong>A1: E-mail não encontrado:</strong><br />
-  - No passo 4, se o e-mail não estiver cadastrado:<br />
-    - O sistema exibe uma mensagem de erro genérica: "Se o e-mail estiver correto, você receberá um link."  </p>
+<strong>Objetivo:</strong> Redefinir a senha para recuperar o acesso.</p>
+<p><strong>Pré-condições</strong>
+- Usuário na tela de <strong>login</strong>.</p>
+<p><strong>Pós-condições</strong>
+- Senha do usuário <strong>atualizada</strong>.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+1. O usuário clica em <strong>“Esqueci minha senha”</strong>.<br />
+2. O sistema solicita o <strong>e-mail</strong> da conta.<br />
+3. O usuário informa o e-mail e confirma.<br />
+4. O sistema envia <strong>link seguro</strong> por e-mail.<br />
+5. O usuário acessa o link e cadastra <strong>nova senha</strong>.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <strong>A1 — E-mail não encontrado</strong><br />
+  4.1. Mensagem genérica por segurança: <em>“Se o e-mail estiver correto, você receberá um link.”</em></p>
 <hr />
 <h2 id="uc-04-realizar-logout">UC-04: Realizar Logout<a class="headerlink" href="#uc-04-realizar-logout" title="Permanent link">&para;</a></h2>
 <p><strong>Ator Principal:</strong> Usuário<br />
-<strong>Objetivo:</strong> Encerrar a sessão de forma segura.<br />
-<strong>Pré-condições:</strong> O usuário está autenticado no sistema.<br />
-<strong>Pós-condições:</strong> O usuário é deslogado e vê a tela de login.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-1. O usuário navega até o menu ou perfil.<br />
-2. O usuário clica na opção "Sair" (Logout).<br />
-3. O sistema encerra a sessão e redireciona para a tela de login.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- N/A  </p>
+<strong>Objetivo:</strong> Encerrar a sessão com segurança.</p>
+<p><strong>Pré-condições</strong>
+- Usuário <strong>autenticado</strong>.</p>
+<p><strong>Pós-condições</strong>
+- Sessão encerrada; exibição da tela de <strong>login</strong>.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+1. Usuário acessa <strong>menu</strong> ou <strong>perfil</strong>.<br />
+2. Clica em <strong>“Sair (Logout)”</strong>.<br />
+3. Sistema encerra a sessão e redireciona para <strong>login</strong>.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <em>Não aplicável.</em></p>
 <hr />
 <h2 id="uc-05-apagar-conta">UC-05: Apagar Conta<a class="headerlink" href="#uc-05-apagar-conta" title="Permanent link">&para;</a></h2>
 <p><strong>Ator Principal:</strong> Usuário<br />
-<strong>Objetivo:</strong> Remover permanentemente sua conta e dados.<br />
-<strong>Pré-condições:</strong> O usuário está autenticado no sistema.<br />
-<strong>Pós-condições:</strong> A conta e os dados do usuário são removidos do sistema.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-1. O usuário navega até as configurações do perfil.<br />
-2. O usuário clica na opção "Apagar Conta".<br />
-3. O sistema exibe um aviso e solicita confirmação.<br />
-4. O usuário confirma a exclusão.<br />
-5. O sistema remove permanentemente a conta.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- <strong>A1: Usuário cancela a exclusão:</strong><br />
-  - No passo 4, se o usuário não confirmar:<br />
-    - O fluxo é encerrado e o usuário permanece na tela de configurações.  </p>
+<strong>Objetivo:</strong> Remover permanentemente sua conta e dados.</p>
+<p><strong>Pré-condições</strong>
+- Usuário <strong>autenticado</strong>.</p>
+<p><strong>Pós-condições</strong>
+- Conta e dados do usuário <strong>removidos</strong> do sistema.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+1. Usuário abre <strong>Configurações do perfil</strong>.<br />
+2. Clica em <strong>“Apagar Conta”</strong>.<br />
+3. Sistema exibe <strong>aviso</strong> e solicita <strong>confirmação</strong>.<br />
+4. Usuário <strong>confirma</strong>.<br />
+5. Sistema remove a conta.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <strong>A1 — Usuário cancela</strong><br />
+  4.1. Sem confirmação, o fluxo é encerrado e o usuário permanece em <strong>Configurações</strong>.</p>
 <hr />
 <h2 id="uc-06-criar-grupo-de-competicao">UC-06: Criar Grupo de Competição<a class="headerlink" href="#uc-06-criar-grupo-de-competicao" title="Permanent link">&para;</a></h2>
 <p><strong>Ator Principal:</strong> Usuário<br />
-<strong>Objetivo:</strong> Criar um novo espaço privado para uma competição.<br />
-<strong>Pré-condições:</strong> O usuário está autenticado.<br />
-<strong>Pós-condições:</strong><br />
-- Um novo grupo é criado.<br />
-- O ator se torna o administrador do novo grupo.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-1. O usuário seleciona "Criar Grupo".<br />
-2. O sistema exibe um formulário (nome, descrição, regras).<br />
-3. O usuário preenche os dados e confirma.<br />
-4. O sistema cria o grupo e exibe sua tela principal.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- <strong>A1: Campos Obrigatórios Vazios:</strong><br />
-  - No passo 4, se um campo obrigatório não for preenchido:<br />
-    - O sistema exibe uma mensagem de erro.<br />
-    - O fluxo retorna ao passo 3.  </p>
+<strong>Objetivo:</strong> Criar novo espaço privado para competição.</p>
+<p><strong>Pré-condições</strong>
+- Usuário <strong>autenticado</strong>.</p>
+<p><strong>Pós-condições</strong>
+- <strong>Grupo criado</strong>.<br />
+- Criador torna-se <strong>administrador</strong>.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+1. Usuário seleciona <strong>“Criar Grupo”</strong>.<br />
+2. Sistema exibe formulário (<strong>nome</strong>, <strong>descrição</strong>, <strong>regras</strong>).<br />
+3. Usuário preenche e confirma.<br />
+4. Sistema cria o grupo e exibe a tela do grupo.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <strong>A1 — Campos obrigatórios vazios</strong><br />
+  4.1. Sistema exibe erros de validação.<br />
+  4.2. Retorna ao passo <strong>3</strong>.</p>
 <hr />
 <h2 id="uc-07-entrar-em-grupo-via-codigo">UC-07: Entrar em Grupo via Código<a class="headerlink" href="#uc-07-entrar-em-grupo-via-codigo" title="Permanent link">&para;</a></h2>
 <p><strong>Ator Principal:</strong> Usuário<br />
-<strong>Objetivo:</strong> Participar de uma competição existente.<br />
-<strong>Pré-condições:</strong><br />
-- O usuário está autenticado.<br />
-- O usuário possui um código de convite.<br />
-<strong>Pós-condições:</strong> O usuário é adicionado como membro do grupo.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-1. O usuário seleciona a opção "Entrar em Grupo".<br />
-2. O usuário insere o código de convite e confirma.<br />
-3. O sistema valida o código e adiciona o usuário ao grupo.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- <strong>A1: Código Inválido:</strong><br />
-  - No passo 3, se o código for inválido:<br />
-    - O sistema exibe uma mensagem de erro.<br />
-    - O fluxo retorna ao passo 2.  </p>
+<strong>Objetivo:</strong> Participar de uma competição existente.</p>
+<p><strong>Pré-condições</strong>
+- Usuário <strong>autenticado</strong>.<br />
+- Possui <strong>código de convite</strong> válido.</p>
+<p><strong>Pós-condições</strong>
+- Usuário adicionado como <strong>membro</strong> do grupo.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+1. Usuário seleciona <strong>“Entrar em Grupo”</strong>.<br />
+2. Informa o <strong>código</strong> e confirma.<br />
+3. Sistema valida e adiciona o usuário ao grupo.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <strong>A1 — Código inválido</strong><br />
+  3.1. Sistema exibe mensagem de erro.<br />
+  3.2. Retorna ao passo <strong>2</strong>.</p>
 <hr />
 <h2 id="uc-08-registrar-atividade-manualmente">UC-08: Registrar Atividade Manualmente<a class="headerlink" href="#uc-08-registrar-atividade-manualmente" title="Permanent link">&para;</a></h2>
 <p><strong>Ator Principal:</strong> Usuário<br />
-<strong>Objetivo:</strong> Adicionar uma nova atividade física para contabilizar pontos.<br />
-<strong>Pré-condições:</strong> O usuário é membro de pelo menos um grupo.<br />
-<strong>Pós-condições:</strong><br />
-- A atividade é registrada.<br />
-- A pontuação é calculada e somada ao ranking.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-1. O usuário seleciona "Registrar Atividade".<br />
-2. O sistema exibe um formulário para inserção de dados (duração, distância, etc.).<br />
-3. O usuário preenche os dados e salva.<br />
-4. O sistema salva a atividade, calcula os pontos e atualiza o ranking.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- <strong>A1: Dados Inválidos:</strong><br />
-  - No passo 4, se os dados forem inválidos (ex: duração igual a zero):<br />
-    - O sistema destaca os campos com erro.<br />
-    - O fluxo retorna ao passo 3.  </p>
+<strong>Objetivo:</strong> Adicionar atividade física e contabilizar pontos.</p>
+<p><strong>Pré-condições</strong>
+- Usuário é membro de <strong>ao menos um</strong> grupo.</p>
+<p><strong>Pós-condições</strong>
+- Atividade <strong>registrada</strong>.<br />
+- Pontos <strong>calculados</strong> e <strong>somados</strong> ao ranking.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+1. Usuário seleciona <strong>“Registrar Atividade”</strong>.<br />
+2. Sistema exibe formulário (ex.: <strong>duração</strong>, <strong>distância</strong>, etc.).<br />
+3. Usuário preenche e <strong>salva</strong>.<br />
+4. Sistema registra, <strong>calcula pontos</strong> e <strong>atualiza o ranking</strong>.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <strong>A1 — Dados inválidos</strong><br />
+  4.1. Sistema destaca campos com erro (ex.: <strong>duração = 0</strong>).<br />
+  4.2. Retorna ao passo <strong>3</strong>.</p>
 <hr />
 <h2 id="uc-09-interagir-no-feed-do-grupo">UC-09: Interagir no Feed do Grupo<a class="headerlink" href="#uc-09-interagir-no-feed-do-grupo" title="Permanent link">&para;</a></h2>
 <p><strong>Ator Principal:</strong> Usuário<br />
-<strong>Objetivo:</strong> Engajar com outros membros através de posts e comentários.<br />
-<strong>Pré-condições:</strong> O usuário é membro do grupo.<br />
-<strong>Pós-condições:</strong> O feed do grupo é atualizado com a nova interação.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-- <strong>Fluxo A: Realizar Post:</strong><br />
-  1. O usuário acessa o feed do grupo.<br />
-  2. O usuário cria um novo post (texto e/ou mídia).<br />
-  3. O usuário publica o post.<br />
-- <strong>Fluxo B: Comentar/Reagir:</strong><br />
-  1. O usuário visualiza um post.<br />
-  2. O usuário escreve um comentário ou seleciona uma reação.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- N/A  </p>
+<strong>Objetivo:</strong> Engajar com membros via posts e comentários.</p>
+<p><strong>Pré-condições</strong>
+- Usuário é <strong>membro</strong> do grupo.</p>
+<p><strong>Pós-condições</strong>
+- Feed do grupo <strong>atualizado</strong> com a interação.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+- <strong>Fluxo A — Realizar Post</strong><br />
+  1. Acessa o <strong>feed</strong>.<br />
+  2. Cria novo post (texto e/ou mídia).<br />
+  3. Publica o post.<br />
+- <strong>Fluxo B — Comentar/Reagir</strong><br />
+  1. Visualiza um post.<br />
+  2. Escreve <strong>comentário</strong> ou registra <strong>reação</strong>.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <em>Não aplicável.</em></p>
 <hr />
 <h2 id="uc-10-gerenciar-grupo-admin">UC-10: Gerenciar Grupo (Admin)<a class="headerlink" href="#uc-10-gerenciar-grupo-admin" title="Permanent link">&para;</a></h2>
-<p><strong>Ator Principal:</strong> Administrador<br />
-<strong>Objetivo:</strong> Gerenciar as configurações e membros do grupo.<br />
-<strong>Pré-condições:</strong> O ator é administrador do grupo.<br />
-<strong>Pós-condições:</strong> As configurações ou a lista de membros do grupo são atualizadas.  </p>
-<p><strong>Fluxo Principal (Caminho Feliz):</strong>
-- <strong>Fluxo A: Editar Configurações:</strong><br />
-  1. O Admin edita nome, descrição ou regras.<br />
-  2. O Admin salva as alterações.<br />
-- <strong>Fluxo B: Remover Membro:</strong><br />
-  1. O Admin seleciona um membro.<br />
-  2. O Admin confirma a remoção.  </p>
-<p><strong>Fluxos Alternativos:</strong><br />
-- <strong>A1: Tentativa de remover o último admin:</strong><br />
-  - No Fluxo B, se o admin tentar se remover ou remover o último admin:<br />
-    - O sistema exibe um erro, instruindo a promover outro membro primeiro.  </p>
+<p><strong>Ator Principal:</strong> <strong>Administrador</strong><br />
+<strong>Objetivo:</strong> Gerenciar configurações e membros do grupo.</p>
+<p><strong>Pré-condições</strong>
+- Usuário possui papel de <strong>administrador</strong> do grupo.</p>
+<p><strong>Pós-condições</strong>
+- Configurações e/ou lista de membros <strong>atualizadas</strong>.</p>
+<p><strong>Fluxo Principal (Caminho Feliz)</strong>
+- <strong>Fluxo A — Editar Configurações</strong><br />
+  1. Admin edita <strong>nome</strong>, <strong>descrição</strong> ou <strong>regras</strong>.<br />
+  2. Admin <strong>salva</strong> alterações.<br />
+- <strong>Fluxo B — Remover Membro</strong><br />
+  1. Admin seleciona um <strong>membro</strong>.<br />
+  2. Admin <strong>confirma</strong> a remoção.</p>
+<p><strong>Fluxos Alternativos</strong>
+- <strong>A1 — Tentativa de remover o último admin</strong><br />
+  2.1. Sistema bloqueia a ação e informa: <strong>promova outro membro</strong> antes de remover o último admin.</p>
+<hr />
 
 
 
