@@ -1,5 +1,8 @@
 # Casos de Uso – Gym Rats
 
+## Descrição
+A elaboração de casos de uso isa descrever as funcionalidades do sistema sob a perspectiva dos usuários, permitindo uma visão geral dos serviços oferecidos pelo sistema e da interação entre os atores.
+
 ## UC-01: Cadastrar Novo Usuário
 **Ator Principal:** Novo Usuário  
 **Objetivo:** Criar uma nova conta no aplicativo para poder participar das competições.  
