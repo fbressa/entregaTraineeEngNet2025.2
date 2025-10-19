@@ -40,6 +40,7 @@ nav:
           - "User Story Map": entregas/usm.md
           - Priorização: entregas/priorizacao.md
           - "Jornada do Usuário": entregas/jornada.md
+          - Casos de uso: entregas/casosdeuso.md
           - Backlog: entregas/backlog.md
       - Rastreabilidade: entregas/rastreabilidade.md
 # ——— Plugins ———
